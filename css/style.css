@@ -15,6 +15,11 @@
 
     font-size: 15px;
     font-family: 'Inter', sans-serif;
+    
+}
+
+body {
+    background-color: var(--Very-dark-blue);
 }
 
 .container {
@@ -31,17 +36,22 @@
     justify-content: center;
     align-items: center;
 
-    height: 435px;
+    background-color: var(--Dark-desaturated-blue);
 
-    border: 1px solid var(--Very-dark-blue);
+    height: 400px;
+
+    border-radius: 6px;
+    
 }
 
-.container__text, .container__img, .container__img img {
-    width: 520px;
+.container__data, .container__img, .container__img img {
+    width: 500px;
 }
 
 .container__img img, .container__color {
-    height: 434px;
+    height: 400px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px
 }
 
 .container__img {
@@ -55,6 +65,82 @@
     width:100%; 
     background-color:var(--Soft-violet);
     opacity: 0.5;
-    filter: contrast(170%) brightness(65%) saturate(150%);
+    filter: contrast(180%) brightness(45%) saturate(170%);
 }
 
+.container__data span {
+    color: var(--Soft-violet);
+    font-size: 32px;
+}
+
+.container__text h2 {
+    font-size: 32px;
+    color: var(--White);
+}
+
+.container__text {
+    padding-left: 40px;
+    padding-right: 85px;
+    margin-left: 35px;
+
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.container__text p {
+    margin-top: 20px;
+    margin-bottom: 60px;
+    font-size: 14px;
+    margin-right: 12px;
+
+    color: var(--Slightly-trasnparent-white-stat-headings);
+}
+
+.container__text__data {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    gap: 45px;
+    margin-right: 30px;
+}
+
+.container__text__data__section h2 {
+    font-size: 22px;
+    color: var(--White);
+}
+
+.container__text__data__section p {
+    font-size: 13px;
+    margin-top: 5px;
+    letter-spacing: 1px;
+    color: var(--Slightly-trasnparent-white-stat-headings);
+}
+
+/* RESPONSIVIDADE */
+
+@media screen and (max-width: 768px) {
+    .container__details {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 250px auto;
+
+        height: 750px;
+    }
+
+    .container__img img, .container__color {
+        height: 250px;
+    }
+
+    .container__data, .container__img, .container__img img {
+        width: 350px;
+    }
+
+    .container__img {
+        grid-row: 1/2;
+    }
+
+
+}
